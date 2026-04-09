@@ -56,7 +56,7 @@
             </p>
             <!-- Sustituye el src por el vídeo de YouTube que quieras -->
             <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    src="https://youtu.be/T7jjnwCj7WY" 
                     title="Video sobre congelación de alimentos" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
