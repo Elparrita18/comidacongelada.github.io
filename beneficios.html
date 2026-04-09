@@ -2,76 +2,182 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Beneficios y Desventajas - Comida Congelada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios y Desventajas - Comida Congelada S.L.</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f8ff; }
-        header, nav, main, footer { margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0056b3; }
-        nav a:hover { text-decoration: underline; }
-        h1 { color: #003366; }
-        .contenedor { max-width: 900px; margin: auto; }
-        ul { margin-left: 20px; }
-        .col2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .box { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+        /* --- VARIABLES DE COLOR CORPORATIVAS --- */
+        :root {
+            --azul-oscuro: #001d3d;
+            --azul-brillante: #003566;
+            --dorado: #ffc300;
+            --celeste: #00a8e8;
+            --verde-exito: #2d6a4f;
+            --rojo-aviso: #ae2012;
+            --blanco: #ffffff;
+            --gris-claro: #f0f4f8;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--gris-claro); 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER --- */
+        header { 
+            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-brillante));
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center;
+            border-bottom: 5px solid var(--dorado);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logo-icono {
+            font-size: 40px;
+            background: var(--blanco);
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav { 
+            background: var(--azul-brillante); 
+            padding: 15px; 
+            text-align: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--dorado); }
+
+        /* --- CONTENEDOR --- */
+        .contenedor { max-width: 1000px; margin: auto; padding: 20px; }
+
+        /* --- SECCIÓN COMPARATIVA --- */
+        .col2 { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin: 30px 0;
+        }
+
+        .box { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .box:hover { transform: translateY(-5px); }
+
+        .beneficios-box { border-top: 8px solid var(--verde-exito); }
+        .desventajas-box { border-top: 8px solid var(--rojo-aviso); }
+
+        h2 { color: var(--azul-oscuro); margin-top: 0; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        
+        /* Iconos de check y alerta */
+        .check::before { content: "✅"; }
+        .alert::before { content: "⚠️"; }
+
+        /* --- CONSEJOS Y CONCLUSIÓN --- */
+        .info-extra {
+            background: var(--azul-oscuro);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .info-extra h2 { color: var(--dorado); border: none; }
+
+        footer { 
+            background: var(--azul-oscuro); 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            margin-top: 50px; 
+        }
     </style>
 </head>
 <body>
+
+<header>
+    <div class="logo-container">
+        <span class="logo-icono">❄️</span>
+        <div>
+            <h1>Análisis de Calidad</h1>
+            <p>Todo lo que necesitas saber sobre la alimentación bajo cero</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="beneficios.html">Beneficios</a>
+</nav>
+
 <div class="contenedor">
-    <header>
-        <h1>Beneficios y Desventajas de la Comida Congelada</h1>
-        <p>Resumen de los puntos clave para entender este tipo de alimentos.</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="beneficios.html">Beneficios y desventajas</a>
-    </nav>
-
     <main>
         <section class="col2">
-            <div class="box">
-                <h2>Beneficios</h2>
+            <div class="box beneficios-box">
+                <h2>Pros / Ventajas</h2>
                 <ul>
-                    <li><strong>Ahorro de tiempo:</strong> muchos platos solo necesitan calentarse.</li>
-                    <li><strong>Menos desperdicio:</strong> se conserva durante más tiempo sin estropearse.</li>
-                    <li><strong>Disponibilidad:</strong> puedes comer productos fuera de temporada.</li>
-                    <li><strong>Seguridad alimentaria:</strong> la congelación frena el crecimiento de microorganismos.</li>
+                    <li class="check"><strong>Ahorro de tiempo:</strong> Ideal para estilos de vida rápidos; del congelador al microondas o sartén en minutos.</li>
+                    <li class="check"><strong>Cero Desperdicio:</strong> Solo cocinas lo que necesitas. El resto se mantiene perfecto por meses.</li>
+                    <li class="check"><strong>Nutrición intacta:</strong> La ultracongelación industrial bloquea los nutrientes en su mejor momento.</li>
+                    <li class="check"><strong>Economía:</strong> Precios estables durante todo el año, sin importar la temporada.</li>
                 </ul>
             </div>
 
-            <div class="box">
-                <h2>Desventajas</h2>
+            <div class="box desventajas-box">
+                <h2>Contras / Retos</h2>
                 <ul>
-                    <li><strong>Textura:</strong> algunos alimentos pierden textura al descongelarse.</li>
-                    <li><strong>Espacio:</strong> se necesita congelador con capacidad suficiente.</li>
-                    <li><strong>Procesados:</strong> algunos productos congelados llevan mucha sal o grasas.</li>
+                    <li class="alert"><strong>Pérdida de Textura:</strong> Algunos vegetales con mucha agua pueden quedar más blandos al descongelar.</li>
+                    <li class="alert"><strong>Dependencia Energética:</strong> Requiere una cadena de frío ininterrumpida y espacio en el hogar.</li>
+                    <li class="alert"><strong>Sodio y Aditivos:</strong> En platos ultraprocesados, es vital revisar las etiquetas nutricionales.</li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <h2>Consejos de uso</h2>
+        <section class="info-extra">
+            <h2>💡 Consejos de nuestros expertos</h2>
             <p>
-                Para aprovechar al máximo la comida congelada, es importante leer las etiquetas, 
-                respetar las fechas de consumo preferente y no volver a congelar un producto 
-                que ya se ha descongelado. De esta forma, se mantiene la calidad y la seguridad.
+                Para mantener la excelencia de <strong>Comida Congelada S.L.</strong> en tu mesa, sigue la regla de oro: 
+                <strong>"Nunca vuelvas a congelar lo que ya ha sido descongelado"</strong>. 
+                Esto previene la aparición de bacterias y mantiene el sabor original del producto. 
             </p>
-        </section>
-
-        <section>
-            <h2>Conclusión</h2>
             <p>
-                La comida congelada es una herramienta muy útil en la organización diaria, tanto 
-                para hogares como para empresas de restauración. Bien utilizada, permite ahorrar 
-                tiempo, dinero y reducir el desperdicio de alimentos.
+                Además, recomendamos descongelar lentamente en la nevera en lugar de a temperatura ambiente para preservar la textura de carnes y pescados.
             </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Comida Congelada S.L. | Beneficios y desventajas</p>
+        <p>&copy; 2026 Comida Congelada S.L. | Expertos en Tecnología de Conservación</p>
+        <p><small>Comprometidos con la seguridad alimentaria y el sabor.</small></p>
     </footer>
 </div>
+
 </body>
 </html>
