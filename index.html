@@ -2,156 +2,73 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Comida Congelada - FrostyBite</title>
+    <title>Comida Congelada</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #1e90ff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 30px;
-            background: white;
-            margin: 20px;
-            border-radius: 10px;
-        }
-        img {
-            width: 250px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f8ff; }
+        header, nav, main, footer { margin-bottom: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #0056b3; }
+        nav a:hover { text-decoration: underline; }
+        h1 { color: #003366; }
+        .contenedor { max-width: 900px; margin: auto; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        section { margin-bottom: 25px; }
     </style>
 </head>
 <body>
+<div class="contenedor">
+    <header>
+        <h1>Comida Congelada</h1>
+        <p>Proyecto web sobre el concepto de comida congelada y su utilidad en la vida diaria.</p>
+    </header>
 
-<header>
-    <h1>FrostyBite</h1>
-    <p>Comida congelada de calidad, lista para disfrutar</p>
-</header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="beneficios.html">Beneficios y desventajas</a>
+    </nav>
 
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#nosotros">Sobre Nosotros</a>
-</nav>
+    <main>
+        <section>
+            <h2>¿Qué es la comida congelada?</h2>
+            <p>
+                La comida congelada es aquella que se conserva a muy bajas temperaturas para 
+                mantener sus propiedades durante más tiempo. Es una solución muy utilizada 
+                por familias, restaurantes y empresas de catering.
+            </p>
+        </section>
 
-<!-- Página 1: Inicio -->
-<section id="inicio">
-    <h2>Bienvenido a FrostyBite</h2>
-    <p>Ofrecemos comida congelada de alta calidad, lista para calentar y disfrutar en minutos. 
-       Comodidad, sabor y nutrición en un solo lugar.</p>
+        <section>
+            <h2>Nuestra empresa: Comida Congelada S.L.</h2>
+            <p>
+                Imagina que has montado tu propia empresa: <strong>Comida Congelada S.L.</strong>. 
+                Nos especializamos en platos preparados congelados, verduras, pescados y postres 
+                listos para calentar y servir.
+            </p>
+            <img src="https://via.placeholder.com/800x400?text=Almac%C3%A9n+de+Comida+Congelada" 
+                 alt="Almacén de comida congelada">
+        </section>
 
-    <h3>¿Por qué elegir comida congelada?</h3>
-    <ul>
-        <li>Mantiene sus propiedades nutricionales</li>
-        <li>Ahorra tiempo</li>
-        <li>Evita desperdicio de alimentos</li>
-        <li>Ideal para personas con poco tiempo</li>
-    </ul>
+        <section>
+            <h2>Vídeo explicativo sobre la congelación de alimentos</h2>
+            <p>
+                En este vídeo se explica de forma sencilla cómo funciona el proceso de congelación 
+                y por qué ayuda a conservar los alimentos.
+            </p>
+            <!-- Sustituye el src por el vídeo de YouTube que quieras -->
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Video sobre congelación de alimentos" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+    </main>
 
-    <h3>Imágenes</h3>
-    <img src="https://images.unsplash.com/photo-1604908177225-6e4c1e9b1f0c" alt="Platos congelados">
-    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31b" alt="Comida lista">
-
-    <h3>Video explicativo</h3>
-    <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/8X9YxZ7wF3E" 
-        title="Video sobre comida congelada" 
-        frameborder="0" allowfullscreen>
-    </iframe>
-
-    <p><a href="#productos">Ir a Productos</a></p>
-</section>
-
-<!-- Página 2: Productos -->
-<section id="productos">
-    <h2>Nuestros Productos</h2>
-
-    <h3>Platos preparados</h3>
-    <ul>
-        <li>Lasaña boloñesa</li>
-        <li>Pollo al curry</li>
-        <li>Pasta Alfredo</li>
-        <li>Arroz con verduras</li>
-    </ul>
-
-    <h3>Snacks congelados</h3>
-    <ul>
-        <li>Mini pizzas</li>
-        <li>Nuggets de pollo</li>
-        <li>Empanadillas</li>
-        <li>Fingers de mozzarella</li>
-    </ul>
-
-    <h3>Postres congelados</h3>
-    <ul>
-        <li>Cheesecake</li>
-        <li>Brownies</li>
-        <li>Helados artesanales</li>
-    </ul>
-
-    <h3>Proceso de calidad</h3>
-    <ol>
-        <li>Seleccionamos ingredientes frescos</li>
-        <li>Cocinamos siguiendo recetas tradicionales</li>
-        <li>Ultracongelamos para conservar sabor y textura</li>
-        <li>Empaquetamos al vacío para mayor durabilidad</li>
-    </ol>
-
-    <p><a href="#nosotros">Conoce más sobre nosotros</a></p>
-</section>
-
-<!-- Página 3: Sobre Nosotros -->
-<section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>FrostyBite nació con la idea de ofrecer comida deliciosa y práctica para personas con un estilo de vida dinámico.</p>
-
-    <h3>Nuestra misión</h3>
-    <ul>
-        <li>Ofrecer productos saludables y sabrosos</li>
-        <li>Facilitar la vida de nuestros clientes</li>
-        <li>Reducir el desperdicio alimentario</li>
-    </ul>
-
-    <h3>Nuestro compromiso</h3>
-    <ul>
-        <li>Ingredientes de calidad</li>
-        <li>Procesos seguros</li>
-        <li>Respeto por el medio ambiente</li>
-    </ul>
-
-    <h3>Síguenos</h3>
-    <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
-</section>
-
-<footer>
-    <p>© 2026 FrostyBite - Comida Congelada</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Comida Congelada S.L. | Proyecto HTML para GitHub</p>
+    </footer>
+</div>
 </body>
 </html>
+
