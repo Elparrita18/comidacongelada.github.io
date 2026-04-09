@@ -2,93 +2,232 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Productos Congelados - Comida Congelada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Congelados - Comida Congelada S.L.</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f8ff; }
-        header, nav, main, footer { margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0056b3; }
-        nav a:hover { text-decoration: underline; }
-        h1 { color: #003366; }
-        .contenedor { max-width: 900px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-        img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
-        h3 { color: #0056b3; margin-top: 0; }
+        /* --- VARIABLES DE COLOR (MISMAS QUE EN INICIO) --- */
+        :root {
+            --azul-oscuro: #001d3d;
+            --azul-brillante: #003566;
+            --dorado: #ffc300;
+            --celeste: #00a8e8;
+            --blanco: #ffffff;
+            --gris-claro: #f0f4f8;
+            --sombra: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--gris-claro); 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER Y LOGO ESTILO MODERNO --- */
+        header { 
+            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-brillante));
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center;
+            border-bottom: 5px solid var(--dorado);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo-icono {
+            font-size: 40px;
+            background: var(--blanco);
+            padding: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 195, 0, 0.4);
+        }
+
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        header p { opacity: 0.9; margin: 5px 0 0; }
+
+        /* --- NAVEGACIÓN ESTILO MODERNO --- */
+        nav { 
+            background: var(--azul-brillante); 
+            padding: 15px; 
+            text-align: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--dorado); text-decoration: none;}
+
+        /* --- CONTENEDOR --- */
+        .contenedor { max-width: 1000px; margin: auto; padding: 20px; }
+
+        h2 { color: var(--azul-oscuro); border-left: 5px solid var(--dorado); padding-left: 10px; margin-top: 30px; }
+
+        /* --- GRID Y CARDS MODERNAS --- */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 20px;
+        }
+
+        .card { 
+            background: var(--blanco); 
+            padding: 0; /* Imagen a sangre */
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* EFECTO HOVER EN LA TARJETA */
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: var(--sombra);
+            border-bottom: 4px solid var(--celeste);
+        }
+
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            margin-bottom: 0; 
+            border-radius: 0;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card h3 { 
+            color: var(--azul-brillante); 
+            margin-top: 0; 
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .card p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* --- SECCIÓN ALMACENAMIENTO --- */
+        .storage-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 40px;
+            border-left: 5px solid var(--celeste);
+        }
+
+        /* --- FOOTER MODERNO --- */
+        footer { 
+            background: var(--azul-oscuro); 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            margin-top: 50px; 
+        }
     </style>
 </head>
 <body>
+
+<header>
+    <div class="logo-container">
+        <span class="logo-icono">❄️</span>
+        <div>
+            <h1>Productos Congelados</h1>
+            <p>La máxima calidad, preservada bajo cero por Comida Congelada S.L.</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="beneficios.html">Beneficios</a>
+</nav>
+
 <div class="contenedor">
-    <header>
-        <h1>Productos Congelados</h1>
-        <p>Algunos ejemplos de productos que ofrece Comida Congelada S.L.</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="beneficios.html">Beneficios y desventajas</a>
-    </nav>
-
     <main>
         <section>
-            <h2>Categorías principales</h2>
+            <h2>Explora nuestro Catálogo</h2>
             <div class="grid">
+                
                 <div class="card">
-                    <h3>Verduras congeladas</h3>
-                    <img src="https://images.unsplash.com/photo-1571105300439-010534c0382d?q=80&w=400" 
+                    <img src="https://images.unsplash.com/photo-1571105300439-010534c0382d?q=80&w=600" 
                          alt="Verduras congeladas">
-                    <p>
-                        Las verduras congeladas se recolectan en su punto óptimo y se congelan rápidamente 
-                        para conservar vitaminas, color y textura.
-                    </p>
+                    <div class="card-content">
+                        <h3>Verduras congeladas</h3>
+                        <p>
+                            Recolectadas en su punto óptimo y ultracongeladas rápidamente para conservar vitaminas, color y textura. Directas del campo a tu plato.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>Platos preparados</h3>
-                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400" 
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=600" 
                          alt="Platos preparados congelados">
-                    <p>
-                        Lasañas, pizzas y guisos listos para calentar. Perfectos para personas 
-                        con poco tiempo que buscan una comida completa.
-                    </p>
+                    <div class="card-content">
+                        <h3>Platos preparados</h3>
+                        <p>
+                            Lasañas artesanales, pizzas de masa lenta y guisos caseros. Perfectos para disfrutar sin cocinar y sin renunciar a una comida completa.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>Pescados y mariscos</h3>
-                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400" 
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=600" 
                          alt="Pescado congelado">
-                    <p>
-                        El pescado congelado permite disfrutar de productos del mar manteniendo 
-                        la seguridad alimentaria y la frescura durante más tiempo.
-                    </p>
+                    <div class="card-content">
+                        <h3>Pescados y mariscos</h3>
+                        <p>
+                            Mantenemos la frescura y seguridad alimentaria del mar, permitiéndote disfrutar de pescados de primera calidad en cualquier momento.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>Postres y helados</h3>
-                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=400" 
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600" 
                          alt="Postres congelados">
-                    <p>
-                        Tartas y helados que se conservan listos para ocasiones 
-                        especiales o para un capricho dulce diario.
-                    </p>
+                    <div class="card-content">
+                        <h3>Postres y helados</h3>
+                        <p>
+                            Tartas de pastelería y helados cremosos listos para servir. El capricho dulce ideal para ocasiones especiales o un postre rápido diario.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </section>
 
-        <section>
-            <h2>¿Cómo se almacenan?</h2>
+        <section class="storage-box">
+            <h2>Garantía de Almacenamiento</h2>
             <p>
-                Todos estos productos se guardan en cámaras frigoríficas industriales a temperaturas 
-                inferiores a <strong>-18°C</strong>. Es vital mantener la cadena de frío desde la fábrica 
-                hasta tu congelador.
+                Todos nuestros productos se custodian en **cámaras frigoríficas industriales** de última generación a temperaturas constantes inferiores a <strong>-18°C</strong>. Nuestro compromiso es garantizar la integridad de la cadena de frío desde el origen hasta su entrega.
             </p>
         </section>
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Comida Congelada S.L. | Proyecto HTML para GitHub</p>
+        <p>&copy; 2026 Comida Congelada S.L. | Expertos en Tecnología del Frío</p>
+        <p><small>Siguenos en la web para más novedades.</small></p>
     </footer>
 </div>
+
 </body>
 </html>
