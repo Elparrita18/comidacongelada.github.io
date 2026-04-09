@@ -44,7 +44,7 @@
                 Nos especializamos en platos preparados congelados, verduras, pescados y postres 
                 listos para calentar y servir.
             </p>
-            <img src="https://via.placeholder.com/800x400?text=Almac%C3%A9n+de+Comida+Congelada" 
+            <img src="https://sl.bing.net/eeLSr84s87w" 
                  alt="Almacén de comida congelada">
         </section>
 
