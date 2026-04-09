@@ -12,7 +12,8 @@
         .contenedor { max-width: 900px; margin: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
         .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-        img { max-width: 100%; height: auto; border-radius: 8px; }
+        img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        h3 { color: #0056b3; margin-top: 0; }
     </style>
 </head>
 <body>
@@ -34,42 +35,41 @@
             <div class="grid">
                 <div class="card">
                     <h3>Verduras congeladas</h3>
-                    <img src="https://via.placeholder.com/400x250?text=Verduras+congeladas" 
+                    <img src="https://images.unsplash.com/photo-1571105300439-010534c0382d?q=80&w=400" 
                          alt="Verduras congeladas">
                     <p>
                         Las verduras congeladas se recolectan en su punto óptimo y se congelan rápidamente 
-                        para conservar vitaminas, color y textura. Son ideales para cocinar de forma rápida 
-                        y saludable.
+                        para conservar vitaminas, color y textura.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Platos preparados</h3>
-                    <img src="https://via.placeholder.com/400x250?text=Platos+preparados+congelados" 
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400" 
                          alt="Platos preparados congelados">
                     <p>
-                        Lasañas, pizzas, guisos y otros platos listos para calentar. Perfectos para personas 
-                        con poco tiempo que no quieren renunciar a una comida completa.
+                        Lasañas, pizzas y guisos listos para calentar. Perfectos para personas 
+                        con poco tiempo que buscan una comida completa.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Pescados y mariscos</h3>
-                    <img src="https://via.placeholder.com/400x250?text=Pescado+congelado" 
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400" 
                          alt="Pescado congelado">
                     <p>
-                        El pescado congelado permite disfrutar de productos del mar incluso lejos de la costa, 
-                        manteniendo la seguridad alimentaria y la frescura durante más tiempo.
+                        El pescado congelado permite disfrutar de productos del mar manteniendo 
+                        la seguridad alimentaria y la frescura durante más tiempo.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Postres y helados</h3>
-                    <img src="https://via.placeholder.com/400x250?text=Postres+congelados" 
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=400" 
                          alt="Postres congelados">
                     <p>
-                        Tartas, helados y otros postres congelados que se conservan listos para ocasiones 
-                        especiales o para un capricho dulce.
+                        Tartas y helados que se conservan listos para ocasiones 
+                        especiales o para un capricho dulce diario.
                     </p>
                 </div>
             </div>
@@ -79,14 +79,15 @@
             <h2>¿Cómo se almacenan?</h2>
             <p>
                 Todos estos productos se guardan en cámaras frigoríficas industriales a temperaturas 
-                inferiores a -18&nbsp;°C. Es importante mantener la cadena de frío desde la fábrica 
-                hasta el consumidor final.
+                inferiores a <strong>-18°C</strong>. Es vital mantener la cadena de frío desde la fábrica 
+                hasta tu congelador.
             </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Comida Congelada S.L. | Productos congelados</p>
+        <hr>
+        <p>&copy; 2026 Comida Congelada S.L. | Proyecto HTML para GitHub</p>
     </footer>
 </div>
 </body>
